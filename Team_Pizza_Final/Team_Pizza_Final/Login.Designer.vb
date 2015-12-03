@@ -29,6 +29,7 @@ Partial Class frmLogin
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.llWelcome = New System.Windows.Forms.Label()
         Me.btnQuit = New System.Windows.Forms.Button()
+        Me.lblWarning = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnLogin
@@ -36,7 +37,7 @@ Partial Class frmLogin
         Me.btnLogin.Location = New System.Drawing.Point(232, 165)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(75, 23)
-        Me.btnLogin.TabIndex = 0
+        Me.btnLogin.TabIndex = 2
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
@@ -45,7 +46,7 @@ Partial Class frmLogin
         Me.txtUser.Location = New System.Drawing.Point(78, 106)
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(198, 20)
-        Me.txtUser.TabIndex = 1
+        Me.txtUser.TabIndex = 0
         '
         'txtPassword
         '
@@ -53,7 +54,7 @@ Partial Class frmLogin
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(198, 20)
-        Me.txtPassword.TabIndex = 2
+        Me.txtPassword.TabIndex = 1
         '
         'lblUser
         '
@@ -88,15 +89,28 @@ Partial Class frmLogin
         Me.btnQuit.Location = New System.Drawing.Point(12, 165)
         Me.btnQuit.Name = "btnQuit"
         Me.btnQuit.Size = New System.Drawing.Size(75, 23)
-        Me.btnQuit.TabIndex = 6
+        Me.btnQuit.TabIndex = 3
         Me.btnQuit.Text = "Quit"
         Me.btnQuit.UseVisualStyleBackColor = True
+        '
+        'lblWarning
+        '
+        Me.lblWarning.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWarning.ForeColor = System.Drawing.Color.Red
+        Me.lblWarning.Location = New System.Drawing.Point(1, 70)
+        Me.lblWarning.Name = "lblWarning"
+        Me.lblWarning.Size = New System.Drawing.Size(318, 23)
+        Me.lblWarning.TabIndex = 7
+        Me.lblWarning.Text = "Warning Text Appears Here"
+        Me.lblWarning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblWarning.Visible = False
         '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(319, 200)
+        Me.Controls.Add(Me.lblWarning)
         Me.Controls.Add(Me.btnQuit)
         Me.Controls.Add(Me.llWelcome)
         Me.Controls.Add(Me.lblPassword)
@@ -117,5 +131,6 @@ Partial Class frmLogin
     Friend WithEvents lblPassword As System.Windows.Forms.Label
     Friend WithEvents llWelcome As System.Windows.Forms.Label
     Friend WithEvents btnQuit As System.Windows.Forms.Button
+    Friend WithEvents lblWarning As System.Windows.Forms.Label
 
 End Class
