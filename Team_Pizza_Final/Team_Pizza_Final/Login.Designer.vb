@@ -30,6 +30,7 @@ Partial Class frmLogin
         Me.llWelcome = New System.Windows.Forms.Label()
         Me.btnQuit = New System.Windows.Forms.Button()
         Me.lblWarning = New System.Windows.Forms.Label()
+        Me.btnRegister = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnLogin
@@ -68,11 +69,11 @@ Partial Class frmLogin
         'lblPassword
         '
         Me.lblPassword.AutoSize = True
-        Me.lblPassword.Location = New System.Drawing.Point(14, 135)
+        Me.lblPassword.Location = New System.Drawing.Point(16, 135)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(53, 13)
+        Me.lblPassword.Size = New System.Drawing.Size(56, 13)
         Me.lblPassword.TabIndex = 4
-        Me.lblPassword.Text = "Passwod:"
+        Me.lblPassword.Text = "Password:"
         '
         'llWelcome
         '
@@ -89,7 +90,7 @@ Partial Class frmLogin
         Me.btnQuit.Location = New System.Drawing.Point(12, 165)
         Me.btnQuit.Name = "btnQuit"
         Me.btnQuit.Size = New System.Drawing.Size(75, 23)
-        Me.btnQuit.TabIndex = 3
+        Me.btnQuit.TabIndex = 4
         Me.btnQuit.Text = "Quit"
         Me.btnQuit.UseVisualStyleBackColor = True
         '
@@ -105,11 +106,21 @@ Partial Class frmLogin
         Me.lblWarning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.lblWarning.Visible = False
         '
+        'btnRegister
+        '
+        Me.btnRegister.Location = New System.Drawing.Point(140, 165)
+        Me.btnRegister.Name = "btnRegister"
+        Me.btnRegister.Size = New System.Drawing.Size(86, 23)
+        Me.btnRegister.TabIndex = 3
+        Me.btnRegister.Text = "Register Admin"
+        Me.btnRegister.UseVisualStyleBackColor = True
+        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(319, 200)
+        Me.Controls.Add(Me.btnRegister)
         Me.Controls.Add(Me.lblWarning)
         Me.Controls.Add(Me.btnQuit)
         Me.Controls.Add(Me.llWelcome)
@@ -132,5 +143,6 @@ Partial Class frmLogin
     Friend WithEvents llWelcome As System.Windows.Forms.Label
     Friend WithEvents btnQuit As System.Windows.Forms.Button
     Friend WithEvents lblWarning As System.Windows.Forms.Label
+    Friend WithEvents btnRegister As System.Windows.Forms.Button
 
 End Class

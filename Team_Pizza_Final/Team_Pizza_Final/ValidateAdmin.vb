@@ -1,9 +1,9 @@
-﻿Public Class frmLogin
+﻿Public Class frmValidateAdmin
 
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+    Private Sub btnValidate_Click(sender As Object, e As EventArgs) Handles btnValidate.Click
         ' Data Validation
         If txtUser.Text = "" OrElse txtPassword.Text = "" Then
-            lblWarning.Text = "Please fill out all fields to login"
+            lblWarning.Text = "Please fill out all fields to validate your admin account"
             lblWarning.Visible = True
         Else
             Dim cnnDatabase As New OleDb.OleDbConnection
@@ -32,7 +32,7 @@
             If userFound = True Then
                 rdDatabase.Close()
                 cnnDatabase.Close()
-                frmMain.Show()
+                frmRegisterAdmin.Show()
                 Me.Hide()
             Else
                 lblWarning.ForeColor = Color.Red
@@ -43,11 +43,7 @@
         End If
     End Sub
 
-    Private Sub btnQuit_Click(sender As Object, e As EventArgs) Handles btnQuit.Click
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
-    End Sub
-
-    Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        frmValidateAdmin.Show()
     End Sub
 End Class

@@ -98,6 +98,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="RegisterAdmin.Designer.vb">
+      <DependentUpon>RegisterAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ValidateAdmin.Designer.vb">
+      <DependentUpon>ValidateAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Login.resx">
@@ -111,6 +123,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterAdmin.resx">
+      <DependentUpon>RegisterAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValidateAdmin.resx">
+      <DependentUpon>ValidateAdmin.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
