@@ -25,3 +25,16 @@ C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final
 C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmRegisterAdmin.resources
 C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmValidateAdmin.resources
 C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.vbproj.GenerateResource.Cache
+C:\Users\JD\Documents\GitHub\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\bin\Debug\Team_Pizza_Final.exe.config
+C:\Users\JD\Documents\GitHub\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.exe
+C:\Users\JD\Documents\GitHub\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.xml
+C:\Users\JD\Documents\GitHub\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.pdb
+C:\Users\JD\Documents\GitHub\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\bin\Debug\Team_Pizza_Final.exe
+C:\Users\JD\Documents\GitHub\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\bin\Debug\Team_Pizza_Final.pdb
+C:\Users\JD\Documents\GitHub\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\bin\Debug\Team_Pizza_Final.xml
+C:\Users\JD\Documents\GitHub\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmLogin.resources
+C:\Users\JD\Documents\GitHub\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmMain.resources
+C:\Users\JD\Documents\GitHub\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\JD\Documents\GitHub\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmRegisterAdmin.resources
+C:\Users\JD\Documents\GitHub\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmValidateAdmin.resources
+C:\Users\JD\Documents\GitHub\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.vbproj.GenerateResource.Cache
