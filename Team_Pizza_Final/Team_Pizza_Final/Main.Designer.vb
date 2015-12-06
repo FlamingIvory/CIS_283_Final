@@ -27,19 +27,27 @@ Partial Class frmMain
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.txtFirstName = New System.Windows.Forms.TextBox()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.txtLastName = New System.Windows.Forms.TextBox()
-        Me.txtID = New System.Windows.Forms.TextBox()
-        Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.lblLastName = New System.Windows.Forms.Label()
-        Me.lblID = New System.Windows.Forms.Label()
-        Me.txtMajor = New System.Windows.Forms.TextBox()
-        Me.lblMajor = New System.Windows.Forms.Label()
-        Me.txtDorm = New System.Windows.Forms.TextBox()
         Me.lblDorm = New System.Windows.Forms.Label()
+        Me.txtState = New System.Windows.Forms.TextBox()
+        Me.lblMajor = New System.Windows.Forms.Label()
+        Me.txtCity = New System.Windows.Forms.TextBox()
+        Me.lblID = New System.Windows.Forms.Label()
+        Me.lblLastName = New System.Windows.Forms.Label()
+        Me.lblFirstName = New System.Windows.Forms.Label()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.txtZip = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.mskSSN = New System.Windows.Forms.MaskedTextBox()
+        Me.mskPhone = New System.Windows.Forms.MaskedTextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
@@ -87,14 +95,22 @@ Partial Class frmMain
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.Navy
+        Me.TabPage2.Controls.Add(Me.mskPhone)
+        Me.TabPage2.Controls.Add(Me.mskSSN)
+        Me.TabPage2.Controls.Add(Me.Label5)
+        Me.TabPage2.Controls.Add(Me.Label4)
+        Me.TabPage2.Controls.Add(Me.Label3)
+        Me.TabPage2.Controls.Add(Me.Label2)
+        Me.TabPage2.Controls.Add(Me.txtEmail)
+        Me.TabPage2.Controls.Add(Me.txtZip)
         Me.TabPage2.Controls.Add(Me.lblDorm)
-        Me.TabPage2.Controls.Add(Me.txtDorm)
+        Me.TabPage2.Controls.Add(Me.txtState)
         Me.TabPage2.Controls.Add(Me.lblMajor)
-        Me.TabPage2.Controls.Add(Me.txtMajor)
+        Me.TabPage2.Controls.Add(Me.txtCity)
         Me.TabPage2.Controls.Add(Me.lblID)
         Me.TabPage2.Controls.Add(Me.lblLastName)
         Me.TabPage2.Controls.Add(Me.lblFirstName)
-        Me.TabPage2.Controls.Add(Me.txtID)
+        Me.TabPage2.Controls.Add(Me.txtAddress)
         Me.TabPage2.Controls.Add(Me.txtLastName)
         Me.TabPage2.Controls.Add(Me.btnSave)
         Me.TabPage2.Controls.Add(Me.txtFirstName)
@@ -105,12 +121,83 @@ Partial Class frmMain
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Edit"
         '
-        'txtFirstName
+        'lblDorm
         '
-        Me.txtFirstName.Location = New System.Drawing.Point(93, 16)
-        Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(124, 20)
-        Me.txtFirstName.TabIndex = 0
+        Me.lblDorm.AutoSize = True
+        Me.lblDorm.ForeColor = System.Drawing.Color.White
+        Me.lblDorm.Location = New System.Drawing.Point(19, 127)
+        Me.lblDorm.Name = "lblDorm"
+        Me.lblDorm.Size = New System.Drawing.Size(32, 13)
+        Me.lblDorm.TabIndex = 12
+        Me.lblDorm.Text = "State"
+        '
+        'txtState
+        '
+        Me.txtState.Location = New System.Drawing.Point(93, 120)
+        Me.txtState.Name = "txtState"
+        Me.txtState.Size = New System.Drawing.Size(124, 20)
+        Me.txtState.TabIndex = 11
+        '
+        'lblMajor
+        '
+        Me.lblMajor.AutoSize = True
+        Me.lblMajor.ForeColor = System.Drawing.Color.White
+        Me.lblMajor.Location = New System.Drawing.Point(19, 101)
+        Me.lblMajor.Name = "lblMajor"
+        Me.lblMajor.Size = New System.Drawing.Size(24, 13)
+        Me.lblMajor.TabIndex = 10
+        Me.lblMajor.Text = "City"
+        '
+        'txtCity
+        '
+        Me.txtCity.Location = New System.Drawing.Point(93, 94)
+        Me.txtCity.Name = "txtCity"
+        Me.txtCity.Size = New System.Drawing.Size(124, 20)
+        Me.txtCity.TabIndex = 9
+        '
+        'lblID
+        '
+        Me.lblID.AutoSize = True
+        Me.lblID.ForeColor = System.Drawing.Color.White
+        Me.lblID.Location = New System.Drawing.Point(19, 75)
+        Me.lblID.Name = "lblID"
+        Me.lblID.Size = New System.Drawing.Size(45, 13)
+        Me.lblID.TabIndex = 8
+        Me.lblID.Text = "Address"
+        '
+        'lblLastName
+        '
+        Me.lblLastName.AutoSize = True
+        Me.lblLastName.ForeColor = System.Drawing.Color.White
+        Me.lblLastName.Location = New System.Drawing.Point(19, 49)
+        Me.lblLastName.Name = "lblLastName"
+        Me.lblLastName.Size = New System.Drawing.Size(58, 13)
+        Me.lblLastName.TabIndex = 6
+        Me.lblLastName.Text = "Last Name"
+        '
+        'lblFirstName
+        '
+        Me.lblFirstName.AutoSize = True
+        Me.lblFirstName.ForeColor = System.Drawing.Color.White
+        Me.lblFirstName.Location = New System.Drawing.Point(19, 23)
+        Me.lblFirstName.Name = "lblFirstName"
+        Me.lblFirstName.Size = New System.Drawing.Size(54, 13)
+        Me.lblFirstName.TabIndex = 5
+        Me.lblFirstName.Text = "FirstName"
+        '
+        'txtAddress
+        '
+        Me.txtAddress.Location = New System.Drawing.Point(93, 68)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(124, 20)
+        Me.txtAddress.TabIndex = 4
+        '
+        'txtLastName
+        '
+        Me.txtLastName.Location = New System.Drawing.Point(93, 42)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.Size = New System.Drawing.Size(124, 20)
+        Me.txtLastName.TabIndex = 3
         '
         'btnSave
         '
@@ -125,83 +212,12 @@ Partial Class frmMain
         Me.btnSave.Text = "Save Changes"
         Me.btnSave.UseVisualStyleBackColor = False
         '
-        'txtLastName
+        'txtFirstName
         '
-        Me.txtLastName.Location = New System.Drawing.Point(93, 42)
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(124, 20)
-        Me.txtLastName.TabIndex = 3
-        '
-        'txtID
-        '
-        Me.txtID.Location = New System.Drawing.Point(93, 68)
-        Me.txtID.Name = "txtID"
-        Me.txtID.Size = New System.Drawing.Size(124, 20)
-        Me.txtID.TabIndex = 4
-        '
-        'lblFirstName
-        '
-        Me.lblFirstName.AutoSize = True
-        Me.lblFirstName.ForeColor = System.Drawing.Color.White
-        Me.lblFirstName.Location = New System.Drawing.Point(19, 23)
-        Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(54, 13)
-        Me.lblFirstName.TabIndex = 5
-        Me.lblFirstName.Text = "FirstName"
-        '
-        'lblLastName
-        '
-        Me.lblLastName.AutoSize = True
-        Me.lblLastName.ForeColor = System.Drawing.Color.White
-        Me.lblLastName.Location = New System.Drawing.Point(19, 49)
-        Me.lblLastName.Name = "lblLastName"
-        Me.lblLastName.Size = New System.Drawing.Size(58, 13)
-        Me.lblLastName.TabIndex = 6
-        Me.lblLastName.Text = "Last Name"
-        '
-        'lblID
-        '
-        Me.lblID.AutoSize = True
-        Me.lblID.ForeColor = System.Drawing.Color.White
-        Me.lblID.Location = New System.Drawing.Point(19, 75)
-        Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(68, 13)
-        Me.lblID.TabIndex = 8
-        Me.lblID.Text = "Student ID #"
-        '
-        'txtMajor
-        '
-        Me.txtMajor.Location = New System.Drawing.Point(93, 94)
-        Me.txtMajor.Name = "txtMajor"
-        Me.txtMajor.Size = New System.Drawing.Size(124, 20)
-        Me.txtMajor.TabIndex = 9
-        '
-        'lblMajor
-        '
-        Me.lblMajor.AutoSize = True
-        Me.lblMajor.ForeColor = System.Drawing.Color.White
-        Me.lblMajor.Location = New System.Drawing.Point(19, 101)
-        Me.lblMajor.Name = "lblMajor"
-        Me.lblMajor.Size = New System.Drawing.Size(33, 13)
-        Me.lblMajor.TabIndex = 10
-        Me.lblMajor.Text = "Major"
-        '
-        'txtDorm
-        '
-        Me.txtDorm.Location = New System.Drawing.Point(93, 120)
-        Me.txtDorm.Name = "txtDorm"
-        Me.txtDorm.Size = New System.Drawing.Size(124, 20)
-        Me.txtDorm.TabIndex = 11
-        '
-        'lblDorm
-        '
-        Me.lblDorm.AutoSize = True
-        Me.lblDorm.ForeColor = System.Drawing.Color.White
-        Me.lblDorm.Location = New System.Drawing.Point(19, 127)
-        Me.lblDorm.Name = "lblDorm"
-        Me.lblDorm.Size = New System.Drawing.Size(72, 13)
-        Me.lblDorm.TabIndex = 12
-        Me.lblDorm.Text = "Dorm Building"
+        Me.txtFirstName.Location = New System.Drawing.Point(93, 16)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(124, 20)
+        Me.txtFirstName.TabIndex = 0
         '
         'TabPage3
         '
@@ -222,6 +238,76 @@ Partial Class frmMain
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "TabPage4"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'txtZip
+        '
+        Me.txtZip.Location = New System.Drawing.Point(93, 146)
+        Me.txtZip.Name = "txtZip"
+        Me.txtZip.Size = New System.Drawing.Size(124, 20)
+        Me.txtZip.TabIndex = 13
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Location = New System.Drawing.Point(93, 198)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(124, 20)
+        Me.txtEmail.TabIndex = 15
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(19, 231)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(29, 13)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "SSN"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(19, 205)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(32, 13)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "Email"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(19, 179)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(48, 13)
+        Me.Label4.TabIndex = 19
+        Me.Label4.Text = "Phone #"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(19, 153)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(46, 13)
+        Me.Label5.TabIndex = 20
+        Me.Label5.Text = "Zipcode"
+        '
+        'mskSSN
+        '
+        Me.mskSSN.Location = New System.Drawing.Point(93, 224)
+        Me.mskSSN.Mask = "--"
+        Me.mskSSN.Name = "mskSSN"
+        Me.mskSSN.Size = New System.Drawing.Size(124, 20)
+        Me.mskSSN.TabIndex = 21
+        '
+        'mskPhone
+        '
+        Me.mskPhone.Location = New System.Drawing.Point(93, 172)
+        Me.mskPhone.Mask = "--"
+        Me.mskPhone.Name = "mskPhone"
+        Me.mskPhone.Size = New System.Drawing.Size(124, 20)
+        Me.mskPhone.TabIndex = 22
         '
         'frmMain
         '
@@ -246,16 +332,24 @@ Partial Class frmMain
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents lblDorm As System.Windows.Forms.Label
-    Friend WithEvents txtDorm As System.Windows.Forms.TextBox
+    Friend WithEvents txtState As System.Windows.Forms.TextBox
     Friend WithEvents lblMajor As System.Windows.Forms.Label
-    Friend WithEvents txtMajor As System.Windows.Forms.TextBox
+    Friend WithEvents txtCity As System.Windows.Forms.TextBox
     Friend WithEvents lblID As System.Windows.Forms.Label
     Friend WithEvents lblLastName As System.Windows.Forms.Label
     Friend WithEvents lblFirstName As System.Windows.Forms.Label
-    Friend WithEvents txtID As System.Windows.Forms.TextBox
+    Friend WithEvents txtAddress As System.Windows.Forms.TextBox
     Friend WithEvents txtLastName As System.Windows.Forms.TextBox
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
+    Friend WithEvents mskPhone As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents mskSSN As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents txtEmail As System.Windows.Forms.TextBox
+    Friend WithEvents txtZip As System.Windows.Forms.TextBox
 End Class

@@ -15,3 +15,13 @@ C:\Users\Navi\Documents\Computer Stuff\CIS_283_Final\Team_Pizza_Final\Team_Pizza
 C:\Users\Navi\Documents\Computer Stuff\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.pdb
 C:\Users\kfisc\Desktop\Time Capsule\2015\School\Fall 2015\CIS 283 - Business Systems Applications\Final Project\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmValidateAdmin.resources
 C:\Users\kfisc\Desktop\Time Capsule\2015\School\Fall 2015\CIS 283 - Business Systems Applications\Final Project\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmRegisterAdmin.resources
+C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\bin\Debug\Team_Pizza_Final.exe.config
+C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.exe
+C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.xml
+C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.pdb
+C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmLogin.resources
+C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmMain.resources
+C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmRegisterAdmin.resources
+C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmValidateAdmin.resources
+C:\Users\Navi\Documents\Business systems and Apps\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.vbproj.GenerateResource.Cache
