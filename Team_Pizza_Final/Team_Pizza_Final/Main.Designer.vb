@@ -25,7 +25,7 @@ Partial Class frmMain
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnQuit = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.tabSearch = New System.Windows.Forms.TabPage()
         Me.grbSearchCriteria = New System.Windows.Forms.GroupBox()
         Me.txtSearchState = New System.Windows.Forms.TextBox()
         Me.lblState = New System.Windows.Forms.Label()
@@ -54,6 +54,8 @@ Partial Class frmMain
         Me.txtResultLastName = New System.Windows.Forms.TextBox()
         Me.txtResultFirstName = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.txtSSN = New System.Windows.Forms.TextBox()
+        Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -73,10 +75,8 @@ Partial Class frmMain
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.txtPhone = New System.Windows.Forms.TextBox()
-        Me.txtSSN = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
+        Me.tabSearch.SuspendLayout()
         Me.grbSearchCriteria.SuspendLayout()
         Me.grbSearchResults.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -102,7 +102,7 @@ Partial Class frmMain
         '
         'TabControl1
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.tabSearch)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
@@ -112,17 +112,17 @@ Partial Class frmMain
         Me.TabControl1.Size = New System.Drawing.Size(310, 295)
         Me.TabControl1.TabIndex = 2
         '
-        'TabPage1
+        'tabSearch
         '
-        Me.TabPage1.Controls.Add(Me.grbSearchCriteria)
-        Me.TabPage1.Controls.Add(Me.grbSearchResults)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(302, 269)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.tabSearch.Controls.Add(Me.grbSearchCriteria)
+        Me.tabSearch.Controls.Add(Me.grbSearchResults)
+        Me.tabSearch.Location = New System.Drawing.Point(4, 22)
+        Me.tabSearch.Name = "tabSearch"
+        Me.tabSearch.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabSearch.Size = New System.Drawing.Size(302, 269)
+        Me.tabSearch.TabIndex = 0
+        Me.tabSearch.Text = "Search"
+        Me.tabSearch.UseVisualStyleBackColor = True
         '
         'grbSearchCriteria
         '
@@ -405,6 +405,20 @@ Partial Class frmMain
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Edit"
         '
+        'txtSSN
+        '
+        Me.txtSSN.Location = New System.Drawing.Point(93, 224)
+        Me.txtSSN.Name = "txtSSN"
+        Me.txtSSN.Size = New System.Drawing.Size(124, 20)
+        Me.txtSSN.TabIndex = 23
+        '
+        'txtPhone
+        '
+        Me.txtPhone.Location = New System.Drawing.Point(93, 172)
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(124, 20)
+        Me.txtPhone.TabIndex = 22
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -577,20 +591,6 @@ Partial Class frmMain
         Me.TabPage4.Text = "TabPage4"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'txtPhone
-        '
-        Me.txtPhone.Location = New System.Drawing.Point(93, 172)
-        Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(124, 20)
-        Me.txtPhone.TabIndex = 22
-        '
-        'txtSSN
-        '
-        Me.txtSSN.Location = New System.Drawing.Point(93, 224)
-        Me.txtSSN.Name = "txtSSN"
-        Me.txtSSN.Size = New System.Drawing.Size(124, 20)
-        Me.txtSSN.TabIndex = 23
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -602,7 +602,7 @@ Partial Class frmMain
         Me.Name = "frmMain"
         Me.Text = "ACME Student Registration System"
         Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
+        Me.tabSearch.ResumeLayout(False)
         Me.grbSearchCriteria.ResumeLayout(False)
         Me.grbSearchCriteria.PerformLayout()
         Me.grbSearchResults.ResumeLayout(False)
@@ -616,7 +616,7 @@ Partial Class frmMain
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnQuit As System.Windows.Forms.Button
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
-    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents tabSearch As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents lblDorm As System.Windows.Forms.Label
     Friend WithEvents txtState As System.Windows.Forms.TextBox
