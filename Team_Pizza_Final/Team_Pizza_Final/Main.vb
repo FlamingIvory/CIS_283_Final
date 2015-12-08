@@ -111,7 +111,6 @@
 
         cmdDelete = New OleDb.OleDbCommand(theSQL, cnnDatabase)
         cnnDatabase.Open()
-        MsgBox(theSQL)
         cmdDelete.ExecuteNonQuery()
         cnnDatabase.Close()
 
