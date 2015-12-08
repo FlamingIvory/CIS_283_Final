@@ -76,7 +76,6 @@ Partial Class frmMain
         Me.btnEditSave = New System.Windows.Forms.Button()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TabControl1.SuspendLayout()
         Me.tabSearch.SuspendLayout()
         Me.grbSearchCriteria.SuspendLayout()
@@ -109,7 +108,6 @@ Partial Class frmMain
         Me.TabControl1.Controls.Add(Me.tabSearch)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl1.Name = "TabControl1"
@@ -472,7 +470,7 @@ Partial Class frmMain
         Me.txtSSN.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSSN.Name = "txtSSN"
         Me.txtSSN.Size = New System.Drawing.Size(184, 26)
-        Me.txtSSN.TabIndex = 23
+        Me.txtSSN.TabIndex = 8
         '
         'txtPhone
         '
@@ -480,7 +478,7 @@ Partial Class frmMain
         Me.txtPhone.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.Size = New System.Drawing.Size(184, 26)
-        Me.txtPhone.TabIndex = 22
+        Me.txtPhone.TabIndex = 6
         '
         'Label5
         '
@@ -532,7 +530,7 @@ Partial Class frmMain
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(184, 26)
-        Me.txtEmail.TabIndex = 15
+        Me.txtEmail.TabIndex = 7
         '
         'txtZip
         '
@@ -540,7 +538,7 @@ Partial Class frmMain
         Me.txtZip.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtZip.Name = "txtZip"
         Me.txtZip.Size = New System.Drawing.Size(184, 26)
-        Me.txtZip.TabIndex = 13
+        Me.txtZip.TabIndex = 5
         '
         'lblDorm
         '
@@ -559,7 +557,7 @@ Partial Class frmMain
         Me.txtState.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtState.Name = "txtState"
         Me.txtState.Size = New System.Drawing.Size(184, 26)
-        Me.txtState.TabIndex = 11
+        Me.txtState.TabIndex = 4
         '
         'lblMajor
         '
@@ -578,7 +576,7 @@ Partial Class frmMain
         Me.txtCity.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCity.Name = "txtCity"
         Me.txtCity.Size = New System.Drawing.Size(184, 26)
-        Me.txtCity.TabIndex = 9
+        Me.txtCity.TabIndex = 3
         '
         'lblID
         '
@@ -619,7 +617,7 @@ Partial Class frmMain
         Me.txtAddress.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(184, 26)
-        Me.txtAddress.TabIndex = 4
+        Me.txtAddress.TabIndex = 2
         '
         'txtLastName
         '
@@ -627,7 +625,7 @@ Partial Class frmMain
         Me.txtLastName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(184, 26)
-        Me.txtLastName.TabIndex = 3
+        Me.txtLastName.TabIndex = 1
         '
         'btnEditSave
         '
@@ -661,17 +659,6 @@ Partial Class frmMain
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "TabPage3"
         Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'TabPage4
-        '
-        Me.TabPage4.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage4.Size = New System.Drawing.Size(457, 421)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "TabPage4"
-        Me.TabPage4.UseVisualStyleBackColor = True
         '
         'frmMain
         '
@@ -713,7 +700,6 @@ Partial Class frmMain
     Friend WithEvents btnEditSave As System.Windows.Forms.Button
     Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
-    Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label

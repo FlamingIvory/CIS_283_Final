@@ -107,12 +107,20 @@
         Dim cmdDelete As New OleDb.OleDbCommand
 
         cnnDatabase.ConnectionString = "Provider=Microsoft.ACE.oleDB.12.0; Data Source=Login.accdb"
-        theSQL = "DELETE Student WHERE Student_OID = " & dtbStudent.Rows(studentRowNo)("Student_OID")
+        theSQL = "DELETE FROM Student WHERE Student_OID = " & dtbStudent.Rows(studentRowNo)("Student_OID")
 
         cmdDelete = New OleDb.OleDbCommand(theSQL, cnnDatabase)
         cnnDatabase.Open()
+        MsgBox(theSQL)
         cmdDelete.ExecuteNonQuery()
         cnnDatabase.Close()
+
+        txtResultSSN.Clear()
+        txtResultFirstName.Clear()
+        txtResultLastName.Clear()
+        txtResultPhoneNo.Clear()
+        txtResultAddress.Clear()
+        txtResultEmail.Clear()
 
         MsgBox("The information was deleted successfully", MsgBoxStyle.Information, "Success!")
 
@@ -124,8 +132,9 @@
         Dim cmdAdd As New OleDb.OleDbCommand
 
         cnnDatabase.ConnectionString = "Provider=Microsoft.ACE.oleDB.12.0; Data Source=Login.accdb"
-        theSQL = "INSERT INTO Student VALUES ('" & txtFirstName.Text & "', " & txtLastName.Text & "', " & txtAddress.Text & "', " & txtCity.Text & "', " & txtState.Text & "', " _
-            & txtZip.Text & "', " & txtPhone.Text & "', " & txtEmail.Text & "', " & txtSSN.Text & "')"
+        theSQL = "INSERT INTO Student(Student_First,Student_Last,Student_Address,Student_City,Student_State,Student_Zip,Student_Phone,Student_Email,Student_SSN) " _
+            & "VALUES ('" & txtFirstName.Text & "','" & txtLastName.Text & "', '" & txtAddress.Text & "', '" & txtCity.Text & "', '" & txtState.Text & "', '" _
+            & txtZip.Text & "', '" & txtPhone.Text & "', '" & txtEmail.Text & "', '" & txtSSN.Text & "')"
 
         cmdAdd = New OleDb.OleDbCommand(theSQL, cnnDatabase)
         cnnDatabase.Open()
