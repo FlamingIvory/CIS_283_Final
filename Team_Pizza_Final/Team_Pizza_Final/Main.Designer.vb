@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnQuit = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -76,29 +77,31 @@ Partial Class frmMain
         Me.btnEditSave = New System.Windows.Forms.Button()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnOpen = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.tabSearch.SuspendLayout()
         Me.grbSearchCriteria.SuspendLayout()
         Me.grbSearchResults.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(80, 69)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(53, 45)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(210, 20)
+        Me.Label1.Size = New System.Drawing.Size(142, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "This is the main form window"
         '
         'btnQuit
         '
-        Me.btnQuit.Location = New System.Drawing.Point(18, 463)
-        Me.btnQuit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnQuit.Location = New System.Drawing.Point(12, 301)
         Me.btnQuit.Name = "btnQuit"
-        Me.btnQuit.Size = New System.Drawing.Size(112, 35)
+        Me.btnQuit.Size = New System.Drawing.Size(75, 23)
         Me.btnQuit.TabIndex = 1
         Me.btnQuit.Text = "Quit"
         Me.btnQuit.UseVisualStyleBackColor = True
@@ -109,21 +112,19 @@ Partial Class frmMain
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(465, 454)
+        Me.TabControl1.Size = New System.Drawing.Size(310, 295)
         Me.TabControl1.TabIndex = 2
         '
         'tabSearch
         '
         Me.tabSearch.Controls.Add(Me.grbSearchCriteria)
         Me.tabSearch.Controls.Add(Me.grbSearchResults)
-        Me.tabSearch.Location = New System.Drawing.Point(4, 29)
-        Me.tabSearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.tabSearch.Location = New System.Drawing.Point(4, 22)
         Me.tabSearch.Name = "tabSearch"
-        Me.tabSearch.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tabSearch.Size = New System.Drawing.Size(457, 421)
+        Me.tabSearch.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tabSearch.Size = New System.Drawing.Size(302, 269)
         Me.tabSearch.TabIndex = 0
         Me.tabSearch.Text = "Search"
         Me.tabSearch.UseVisualStyleBackColor = True
@@ -142,112 +143,99 @@ Partial Class frmMain
         Me.grbSearchCriteria.Controls.Add(Me.lblSearchFirstName)
         Me.grbSearchCriteria.Controls.Add(Me.txtSearchLastName)
         Me.grbSearchCriteria.Location = New System.Drawing.Point(0, 0)
-        Me.grbSearchCriteria.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.grbSearchCriteria.Name = "grbSearchCriteria"
-        Me.grbSearchCriteria.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.grbSearchCriteria.Size = New System.Drawing.Size(453, 195)
+        Me.grbSearchCriteria.Size = New System.Drawing.Size(302, 127)
         Me.grbSearchCriteria.TabIndex = 11
         Me.grbSearchCriteria.TabStop = False
         Me.grbSearchCriteria.Text = "Search Criteria"
         '
         'txtSearchState
         '
-        Me.txtSearchState.Location = New System.Drawing.Point(328, 111)
-        Me.txtSearchState.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSearchState.Location = New System.Drawing.Point(219, 72)
         Me.txtSearchState.Name = "txtSearchState"
-        Me.txtSearchState.Size = New System.Drawing.Size(110, 26)
+        Me.txtSearchState.Size = New System.Drawing.Size(75, 20)
         Me.txtSearchState.TabIndex = 9
         '
         'lblState
         '
         Me.lblState.AutoSize = True
-        Me.lblState.Location = New System.Drawing.Point(267, 115)
-        Me.lblState.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblState.Location = New System.Drawing.Point(178, 75)
         Me.lblState.Name = "lblState"
-        Me.lblState.Size = New System.Drawing.Size(52, 20)
+        Me.lblState.Size = New System.Drawing.Size(35, 13)
         Me.lblState.TabIndex = 10
         Me.lblState.Text = "State:"
         '
         'txtSearchCity
         '
-        Me.txtSearchCity.Location = New System.Drawing.Point(106, 111)
-        Me.txtSearchCity.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSearchCity.Location = New System.Drawing.Point(71, 72)
         Me.txtSearchCity.Name = "txtSearchCity"
-        Me.txtSearchCity.Size = New System.Drawing.Size(110, 26)
+        Me.txtSearchCity.Size = New System.Drawing.Size(75, 20)
         Me.txtSearchCity.TabIndex = 7
         '
         'lblSearchCity
         '
         Me.lblSearchCity.AutoSize = True
-        Me.lblSearchCity.Location = New System.Drawing.Point(57, 115)
-        Me.lblSearchCity.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSearchCity.Location = New System.Drawing.Point(38, 75)
         Me.lblSearchCity.Name = "lblSearchCity"
-        Me.lblSearchCity.Size = New System.Drawing.Size(39, 20)
+        Me.lblSearchCity.Size = New System.Drawing.Size(27, 13)
         Me.lblSearchCity.TabIndex = 8
         Me.lblSearchCity.Text = "City:"
         '
         'txtSearchSSN
         '
-        Me.txtSearchSSN.Location = New System.Drawing.Point(106, 31)
-        Me.txtSearchSSN.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSearchSSN.Location = New System.Drawing.Point(71, 20)
         Me.txtSearchSSN.Name = "txtSearchSSN"
-        Me.txtSearchSSN.Size = New System.Drawing.Size(110, 26)
+        Me.txtSearchSSN.Size = New System.Drawing.Size(75, 20)
         Me.txtSearchSSN.TabIndex = 5
         '
         'lblSearchStudentID
         '
         Me.lblSearchStudentID.AutoSize = True
-        Me.lblSearchStudentID.Location = New System.Drawing.Point(50, 35)
-        Me.lblSearchStudentID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSearchStudentID.Location = New System.Drawing.Point(33, 23)
         Me.lblSearchStudentID.Name = "lblSearchStudentID"
-        Me.lblSearchStudentID.Size = New System.Drawing.Size(46, 20)
+        Me.lblSearchStudentID.Size = New System.Drawing.Size(32, 13)
         Me.lblSearchStudentID.TabIndex = 4
         Me.lblSearchStudentID.Text = "SSN:"
         '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(328, 151)
-        Me.btnSearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnSearch.Location = New System.Drawing.Point(219, 98)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(112, 35)
+        Me.btnSearch.Size = New System.Drawing.Size(75, 23)
         Me.btnSearch.TabIndex = 6
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = True
         '
         'txtSearchFirstName
         '
-        Me.txtSearchFirstName.Location = New System.Drawing.Point(106, 71)
-        Me.txtSearchFirstName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSearchFirstName.Location = New System.Drawing.Point(71, 46)
         Me.txtSearchFirstName.Name = "txtSearchFirstName"
-        Me.txtSearchFirstName.Size = New System.Drawing.Size(110, 26)
+        Me.txtSearchFirstName.Size = New System.Drawing.Size(75, 20)
         Me.txtSearchFirstName.TabIndex = 2
         '
         'lblSearchLastName
         '
         Me.lblSearchLastName.AutoSize = True
-        Me.lblSearchLastName.Location = New System.Drawing.Point(228, 75)
-        Me.lblSearchLastName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSearchLastName.Location = New System.Drawing.Point(152, 49)
         Me.lblSearchLastName.Name = "lblSearchLastName"
-        Me.lblSearchLastName.Size = New System.Drawing.Size(90, 20)
+        Me.lblSearchLastName.Size = New System.Drawing.Size(61, 13)
         Me.lblSearchLastName.TabIndex = 1
         Me.lblSearchLastName.Text = "Last Name:"
         '
         'lblSearchFirstName
         '
         Me.lblSearchFirstName.AutoSize = True
-        Me.lblSearchFirstName.Location = New System.Drawing.Point(8, 75)
-        Me.lblSearchFirstName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSearchFirstName.Location = New System.Drawing.Point(5, 49)
         Me.lblSearchFirstName.Name = "lblSearchFirstName"
-        Me.lblSearchFirstName.Size = New System.Drawing.Size(90, 20)
+        Me.lblSearchFirstName.Size = New System.Drawing.Size(60, 13)
         Me.lblSearchFirstName.TabIndex = 3
         Me.lblSearchFirstName.Text = "First Name:"
         '
         'txtSearchLastName
         '
-        Me.txtSearchLastName.Location = New System.Drawing.Point(328, 71)
-        Me.txtSearchLastName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSearchLastName.Location = New System.Drawing.Point(219, 46)
         Me.txtSearchLastName.Name = "txtSearchLastName"
-        Me.txtSearchLastName.Size = New System.Drawing.Size(110, 26)
+        Me.txtSearchLastName.Size = New System.Drawing.Size(75, 20)
         Me.txtSearchLastName.TabIndex = 0
         '
         'grbSearchResults
@@ -267,156 +255,141 @@ Partial Class frmMain
         Me.grbSearchResults.Controls.Add(Me.lblResultFirstName)
         Me.grbSearchResults.Controls.Add(Me.txtResultLastName)
         Me.grbSearchResults.Controls.Add(Me.txtResultFirstName)
-        Me.grbSearchResults.Location = New System.Drawing.Point(0, 195)
-        Me.grbSearchResults.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.grbSearchResults.Location = New System.Drawing.Point(0, 127)
         Me.grbSearchResults.Name = "grbSearchResults"
-        Me.grbSearchResults.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.grbSearchResults.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.grbSearchResults.Size = New System.Drawing.Size(453, 218)
+        Me.grbSearchResults.Size = New System.Drawing.Size(302, 142)
         Me.grbSearchResults.TabIndex = 10
         Me.grbSearchResults.TabStop = False
         Me.grbSearchResults.Text = "Search Results"
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(30, 183)
+        Me.btnDelete.Location = New System.Drawing.Point(20, 119)
+        Me.btnDelete.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(96, 35)
+        Me.btnDelete.Size = New System.Drawing.Size(64, 23)
         Me.btnDelete.TabIndex = 22
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
         'btnEdit
         '
-        Me.btnEdit.Location = New System.Drawing.Point(328, 174)
-        Me.btnEdit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnEdit.Location = New System.Drawing.Point(219, 113)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(112, 35)
+        Me.btnEdit.Size = New System.Drawing.Size(75, 23)
         Me.btnEdit.TabIndex = 21
         Me.btnEdit.Text = "Edit"
         Me.btnEdit.UseVisualStyleBackColor = True
         '
         'txtResultAddress
         '
-        Me.txtResultAddress.Location = New System.Drawing.Point(106, 149)
-        Me.txtResultAddress.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtResultAddress.Location = New System.Drawing.Point(71, 97)
         Me.txtResultAddress.Name = "txtResultAddress"
         Me.txtResultAddress.ReadOnly = True
-        Me.txtResultAddress.Size = New System.Drawing.Size(178, 26)
+        Me.txtResultAddress.Size = New System.Drawing.Size(120, 20)
         Me.txtResultAddress.TabIndex = 20
         '
         'lblAddress
         '
         Me.lblAddress.AutoSize = True
-        Me.lblAddress.Location = New System.Drawing.Point(26, 154)
-        Me.lblAddress.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblAddress.Location = New System.Drawing.Point(17, 100)
         Me.lblAddress.Name = "lblAddress"
-        Me.lblAddress.Size = New System.Drawing.Size(72, 20)
+        Me.lblAddress.Size = New System.Drawing.Size(48, 13)
         Me.lblAddress.TabIndex = 19
         Me.lblAddress.Text = "Address:"
         '
         'txtResultEmail
         '
-        Me.txtResultEmail.Location = New System.Drawing.Point(332, 109)
-        Me.txtResultEmail.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtResultEmail.Location = New System.Drawing.Point(221, 71)
         Me.txtResultEmail.Name = "txtResultEmail"
         Me.txtResultEmail.ReadOnly = True
-        Me.txtResultEmail.Size = New System.Drawing.Size(110, 26)
+        Me.txtResultEmail.Size = New System.Drawing.Size(75, 20)
         Me.txtResultEmail.TabIndex = 18
         '
         'lblResultEmail
         '
         Me.lblResultEmail.AutoSize = True
-        Me.lblResultEmail.Location = New System.Drawing.Point(270, 114)
-        Me.lblResultEmail.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblResultEmail.Location = New System.Drawing.Point(180, 74)
         Me.lblResultEmail.Name = "lblResultEmail"
-        Me.lblResultEmail.Size = New System.Drawing.Size(52, 20)
+        Me.lblResultEmail.Size = New System.Drawing.Size(35, 13)
         Me.lblResultEmail.TabIndex = 17
         Me.lblResultEmail.Text = "Email:"
         '
         'txtResultPhoneNo
         '
-        Me.txtResultPhoneNo.Location = New System.Drawing.Point(106, 109)
-        Me.txtResultPhoneNo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtResultPhoneNo.Location = New System.Drawing.Point(71, 71)
         Me.txtResultPhoneNo.Name = "txtResultPhoneNo"
         Me.txtResultPhoneNo.ReadOnly = True
-        Me.txtResultPhoneNo.Size = New System.Drawing.Size(110, 26)
+        Me.txtResultPhoneNo.Size = New System.Drawing.Size(75, 20)
         Me.txtResultPhoneNo.TabIndex = 16
         '
         'lblPhoneNo
         '
         Me.lblPhoneNo.AutoSize = True
-        Me.lblPhoneNo.Location = New System.Drawing.Point(6, 114)
-        Me.lblPhoneNo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblPhoneNo.Location = New System.Drawing.Point(4, 74)
         Me.lblPhoneNo.Name = "lblPhoneNo"
-        Me.lblPhoneNo.Size = New System.Drawing.Size(87, 20)
+        Me.lblPhoneNo.Size = New System.Drawing.Size(61, 13)
         Me.lblPhoneNo.TabIndex = 15
         Me.lblPhoneNo.Text = "Phone No.:"
         '
         'txtResultSSN
         '
-        Me.txtResultSSN.Location = New System.Drawing.Point(106, 29)
-        Me.txtResultSSN.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtResultSSN.Location = New System.Drawing.Point(71, 19)
         Me.txtResultSSN.Name = "txtResultSSN"
         Me.txtResultSSN.ReadOnly = True
-        Me.txtResultSSN.Size = New System.Drawing.Size(110, 26)
+        Me.txtResultSSN.Size = New System.Drawing.Size(75, 20)
         Me.txtResultSSN.TabIndex = 14
         '
         'cboSelectResults
         '
         Me.cboSelectResults.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboSelectResults.Location = New System.Drawing.Point(236, 0)
-        Me.cboSelectResults.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cboSelectResults.Location = New System.Drawing.Point(157, 0)
         Me.cboSelectResults.Name = "cboSelectResults"
-        Me.cboSelectResults.Size = New System.Drawing.Size(216, 28)
+        Me.cboSelectResults.Size = New System.Drawing.Size(145, 21)
         Me.cboSelectResults.TabIndex = 7
         '
         'lblResultSSN
         '
         Me.lblResultSSN.AutoSize = True
-        Me.lblResultSSN.Location = New System.Drawing.Point(50, 34)
-        Me.lblResultSSN.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblResultSSN.Location = New System.Drawing.Point(33, 22)
         Me.lblResultSSN.Name = "lblResultSSN"
-        Me.lblResultSSN.Size = New System.Drawing.Size(46, 20)
+        Me.lblResultSSN.Size = New System.Drawing.Size(32, 13)
         Me.lblResultSSN.TabIndex = 13
         Me.lblResultSSN.Text = "SSN:"
         '
         'lblResultLastName
         '
         Me.lblResultLastName.AutoSize = True
-        Me.lblResultLastName.Location = New System.Drawing.Point(231, 74)
-        Me.lblResultLastName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblResultLastName.Location = New System.Drawing.Point(154, 48)
         Me.lblResultLastName.Name = "lblResultLastName"
-        Me.lblResultLastName.Size = New System.Drawing.Size(90, 20)
+        Me.lblResultLastName.Size = New System.Drawing.Size(61, 13)
         Me.lblResultLastName.TabIndex = 10
         Me.lblResultLastName.Text = "Last Name:"
         '
         'lblResultFirstName
         '
         Me.lblResultFirstName.AutoSize = True
-        Me.lblResultFirstName.Location = New System.Drawing.Point(8, 74)
-        Me.lblResultFirstName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblResultFirstName.Location = New System.Drawing.Point(5, 48)
         Me.lblResultFirstName.Name = "lblResultFirstName"
-        Me.lblResultFirstName.Size = New System.Drawing.Size(90, 20)
+        Me.lblResultFirstName.Size = New System.Drawing.Size(60, 13)
         Me.lblResultFirstName.TabIndex = 12
         Me.lblResultFirstName.Text = "First Name:"
         '
         'txtResultLastName
         '
-        Me.txtResultLastName.Location = New System.Drawing.Point(332, 69)
-        Me.txtResultLastName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtResultLastName.Location = New System.Drawing.Point(221, 45)
         Me.txtResultLastName.Name = "txtResultLastName"
         Me.txtResultLastName.ReadOnly = True
-        Me.txtResultLastName.Size = New System.Drawing.Size(110, 26)
+        Me.txtResultLastName.Size = New System.Drawing.Size(75, 20)
         Me.txtResultLastName.TabIndex = 9
         '
         'txtResultFirstName
         '
-        Me.txtResultFirstName.Location = New System.Drawing.Point(106, 69)
-        Me.txtResultFirstName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtResultFirstName.Location = New System.Drawing.Point(71, 45)
         Me.txtResultFirstName.Name = "txtResultFirstName"
         Me.txtResultFirstName.ReadOnly = True
-        Me.txtResultFirstName.Size = New System.Drawing.Size(110, 26)
+        Me.txtResultFirstName.Size = New System.Drawing.Size(75, 20)
         Me.txtResultFirstName.TabIndex = 11
         '
         'TabPage2
@@ -442,11 +415,10 @@ Partial Class frmMain
         Me.TabPage2.Controls.Add(Me.txtLastName)
         Me.TabPage2.Controls.Add(Me.btnEditSave)
         Me.TabPage2.Controls.Add(Me.txtFirstName)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage2.Size = New System.Drawing.Size(457, 421)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage2.Size = New System.Drawing.Size(302, 269)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Add/Edit"
         '
@@ -454,40 +426,36 @@ Partial Class frmMain
         '
         Me.btnAdd.BackColor = System.Drawing.SystemColors.Control
         Me.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAdd.Font = New System.Drawing.Font("Lucida Sans", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdd.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnAdd.Location = New System.Drawing.Point(342, 275)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnAdd.Location = New System.Drawing.Point(228, 179)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(104, 55)
+        Me.btnAdd.Size = New System.Drawing.Size(69, 36)
         Me.btnAdd.TabIndex = 24
         Me.btnAdd.Text = "Add Student"
         Me.btnAdd.UseVisualStyleBackColor = False
         '
         'txtSSN
         '
-        Me.txtSSN.Location = New System.Drawing.Point(140, 345)
-        Me.txtSSN.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSSN.Location = New System.Drawing.Point(93, 224)
         Me.txtSSN.Name = "txtSSN"
-        Me.txtSSN.Size = New System.Drawing.Size(184, 26)
+        Me.txtSSN.Size = New System.Drawing.Size(124, 20)
         Me.txtSSN.TabIndex = 8
         '
         'txtPhone
         '
-        Me.txtPhone.Location = New System.Drawing.Point(140, 265)
-        Me.txtPhone.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPhone.Location = New System.Drawing.Point(93, 172)
         Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(184, 26)
+        Me.txtPhone.Size = New System.Drawing.Size(124, 20)
         Me.txtPhone.TabIndex = 6
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(28, 235)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(19, 153)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(66, 20)
+        Me.Label5.Size = New System.Drawing.Size(46, 13)
         Me.Label5.TabIndex = 20
         Me.Label5.Text = "Zipcode"
         '
@@ -495,10 +463,9 @@ Partial Class frmMain
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(28, 275)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(19, 179)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(68, 20)
+        Me.Label4.Size = New System.Drawing.Size(48, 13)
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Phone #"
         '
@@ -506,10 +473,9 @@ Partial Class frmMain
         '
         Me.Label3.AutoSize = True
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(28, 315)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(19, 205)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(48, 20)
+        Me.Label3.Size = New System.Drawing.Size(32, 13)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Email"
         '
@@ -517,75 +483,67 @@ Partial Class frmMain
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(28, 355)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(19, 231)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(42, 20)
+        Me.Label2.Size = New System.Drawing.Size(29, 13)
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "SSN"
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(140, 305)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtEmail.Location = New System.Drawing.Point(93, 198)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(184, 26)
+        Me.txtEmail.Size = New System.Drawing.Size(124, 20)
         Me.txtEmail.TabIndex = 7
         '
         'txtZip
         '
-        Me.txtZip.Location = New System.Drawing.Point(140, 225)
-        Me.txtZip.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtZip.Location = New System.Drawing.Point(93, 146)
         Me.txtZip.Name = "txtZip"
-        Me.txtZip.Size = New System.Drawing.Size(184, 26)
+        Me.txtZip.Size = New System.Drawing.Size(124, 20)
         Me.txtZip.TabIndex = 5
         '
         'lblDorm
         '
         Me.lblDorm.AutoSize = True
         Me.lblDorm.ForeColor = System.Drawing.Color.Black
-        Me.lblDorm.Location = New System.Drawing.Point(28, 195)
-        Me.lblDorm.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDorm.Location = New System.Drawing.Point(19, 127)
         Me.lblDorm.Name = "lblDorm"
-        Me.lblDorm.Size = New System.Drawing.Size(48, 20)
+        Me.lblDorm.Size = New System.Drawing.Size(32, 13)
         Me.lblDorm.TabIndex = 12
         Me.lblDorm.Text = "State"
         '
         'txtState
         '
-        Me.txtState.Location = New System.Drawing.Point(140, 185)
-        Me.txtState.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtState.Location = New System.Drawing.Point(93, 120)
         Me.txtState.Name = "txtState"
-        Me.txtState.Size = New System.Drawing.Size(184, 26)
+        Me.txtState.Size = New System.Drawing.Size(124, 20)
         Me.txtState.TabIndex = 4
         '
         'lblMajor
         '
         Me.lblMajor.AutoSize = True
         Me.lblMajor.ForeColor = System.Drawing.Color.Black
-        Me.lblMajor.Location = New System.Drawing.Point(28, 155)
-        Me.lblMajor.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblMajor.Location = New System.Drawing.Point(19, 101)
         Me.lblMajor.Name = "lblMajor"
-        Me.lblMajor.Size = New System.Drawing.Size(35, 20)
+        Me.lblMajor.Size = New System.Drawing.Size(24, 13)
         Me.lblMajor.TabIndex = 10
         Me.lblMajor.Text = "City"
         '
         'txtCity
         '
-        Me.txtCity.Location = New System.Drawing.Point(140, 145)
-        Me.txtCity.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtCity.Location = New System.Drawing.Point(93, 94)
         Me.txtCity.Name = "txtCity"
-        Me.txtCity.Size = New System.Drawing.Size(184, 26)
+        Me.txtCity.Size = New System.Drawing.Size(124, 20)
         Me.txtCity.TabIndex = 3
         '
         'lblID
         '
         Me.lblID.AutoSize = True
         Me.lblID.ForeColor = System.Drawing.Color.Black
-        Me.lblID.Location = New System.Drawing.Point(28, 115)
-        Me.lblID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblID.Location = New System.Drawing.Point(19, 75)
         Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(68, 20)
+        Me.lblID.Size = New System.Drawing.Size(45, 13)
         Me.lblID.TabIndex = 8
         Me.lblID.Text = "Address"
         '
@@ -593,10 +551,9 @@ Partial Class frmMain
         '
         Me.lblLastName.AutoSize = True
         Me.lblLastName.ForeColor = System.Drawing.Color.Black
-        Me.lblLastName.Location = New System.Drawing.Point(28, 75)
-        Me.lblLastName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblLastName.Location = New System.Drawing.Point(19, 49)
         Me.lblLastName.Name = "lblLastName"
-        Me.lblLastName.Size = New System.Drawing.Size(86, 20)
+        Me.lblLastName.Size = New System.Drawing.Size(58, 13)
         Me.lblLastName.TabIndex = 6
         Me.lblLastName.Text = "Last Name"
         '
@@ -604,71 +561,94 @@ Partial Class frmMain
         '
         Me.lblFirstName.AutoSize = True
         Me.lblFirstName.ForeColor = System.Drawing.Color.Black
-        Me.lblFirstName.Location = New System.Drawing.Point(28, 35)
-        Me.lblFirstName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblFirstName.Location = New System.Drawing.Point(19, 23)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(82, 20)
+        Me.lblFirstName.Size = New System.Drawing.Size(54, 13)
         Me.lblFirstName.TabIndex = 5
         Me.lblFirstName.Text = "FirstName"
         '
         'txtAddress
         '
-        Me.txtAddress.Location = New System.Drawing.Point(140, 105)
-        Me.txtAddress.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtAddress.Location = New System.Drawing.Point(93, 68)
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(184, 26)
+        Me.txtAddress.Size = New System.Drawing.Size(124, 20)
         Me.txtAddress.TabIndex = 2
         '
         'txtLastName
         '
-        Me.txtLastName.Location = New System.Drawing.Point(140, 65)
-        Me.txtLastName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtLastName.Location = New System.Drawing.Point(93, 42)
         Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(184, 26)
+        Me.txtLastName.Size = New System.Drawing.Size(124, 20)
         Me.txtLastName.TabIndex = 1
         '
         'btnEditSave
         '
         Me.btnEditSave.BackColor = System.Drawing.SystemColors.Control
         Me.btnEditSave.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEditSave.Font = New System.Drawing.Font("Lucida Sans", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEditSave.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnEditSave.Location = New System.Drawing.Point(342, 349)
-        Me.btnEditSave.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnEditSave.Location = New System.Drawing.Point(228, 227)
         Me.btnEditSave.Name = "btnEditSave"
-        Me.btnEditSave.Size = New System.Drawing.Size(104, 55)
+        Me.btnEditSave.Size = New System.Drawing.Size(69, 36)
         Me.btnEditSave.TabIndex = 1
         Me.btnEditSave.Text = "Save Changes"
         Me.btnEditSave.UseVisualStyleBackColor = False
         '
         'txtFirstName
         '
-        Me.txtFirstName.Location = New System.Drawing.Point(140, 25)
-        Me.txtFirstName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtFirstName.Location = New System.Drawing.Point(93, 16)
         Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(184, 26)
+        Me.txtFirstName.Size = New System.Drawing.Size(124, 20)
         Me.txtFirstName.TabIndex = 0
         '
         'TabPage3
         '
-        Me.TabPage3.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabPage3.Controls.Add(Me.btnUpdate)
+        Me.TabPage3.Controls.Add(Me.btnOpen)
+        Me.TabPage3.Controls.Add(Me.Label6)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage3.Size = New System.Drawing.Size(457, 421)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage3.Size = New System.Drawing.Size(302, 269)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "TabPage3"
+        Me.TabPage3.Text = "From File"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(23, 23)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(255, 91)
+        Me.Label6.TabIndex = 0
+        Me.Label6.Text = resources.GetString("Label6.Text")
+        '
+        'btnOpen
+        '
+        Me.btnOpen.Location = New System.Drawing.Point(26, 158)
+        Me.btnOpen.Name = "btnOpen"
+        Me.btnOpen.Size = New System.Drawing.Size(75, 23)
+        Me.btnOpen.TabIndex = 1
+        Me.btnOpen.Text = "Open"
+        Me.btnOpen.UseVisualStyleBackColor = True
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.Location = New System.Drawing.Point(203, 158)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.TabIndex = 2
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(470, 517)
+        Me.ClientSize = New System.Drawing.Size(313, 336)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.btnQuit)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmMain"
         Me.Text = "ACME Student Registration System"
         Me.TabControl1.ResumeLayout(False)
@@ -679,6 +659,8 @@ Partial Class frmMain
         Me.grbSearchResults.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -737,4 +719,7 @@ Partial Class frmMain
     Friend WithEvents txtSSN As System.Windows.Forms.TextBox
     Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents btnAdd As System.Windows.Forms.Button
+    Friend WithEvents btnUpdate As System.Windows.Forms.Button
+    Friend WithEvents btnOpen As System.Windows.Forms.Button
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

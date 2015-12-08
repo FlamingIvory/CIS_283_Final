@@ -51,3 +51,13 @@ C:\Users\Sarah\Documents\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Deb
 C:\Users\Sarah\Documents\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmRegisterAdmin.resources
 C:\Users\Sarah\Documents\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmValidateAdmin.resources
 C:\Users\Sarah\Documents\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.vbproj.GenerateResource.Cache
+C:\Users\Valerie\Documents\Business Systems\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\bin\Debug\Team_Pizza_Final.exe.config
+C:\Users\Valerie\Documents\Business Systems\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.exe
+C:\Users\Valerie\Documents\Business Systems\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.xml
+C:\Users\Valerie\Documents\Business Systems\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.pdb
+C:\Users\Valerie\Documents\Business Systems\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmLogin.resources
+C:\Users\Valerie\Documents\Business Systems\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmMain.resources
+C:\Users\Valerie\Documents\Business Systems\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Valerie\Documents\Business Systems\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmRegisterAdmin.resources
+C:\Users\Valerie\Documents\Business Systems\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\WindowsApplication1.frmValidateAdmin.resources
+C:\Users\Valerie\Documents\Business Systems\CIS_283_Final\Team_Pizza_Final\Team_Pizza_Final\obj\Debug\Team_Pizza_Final.vbproj.GenerateResource.Cache

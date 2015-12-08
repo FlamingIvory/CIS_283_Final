@@ -143,4 +143,43 @@
         MsgBox("The information was added successfully", MsgBoxStyle.Information, "Success!")
 
     End Sub
+
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Dim Information As String
+        Information = Student.ReadLine()
+        Dim Split = Information.Split(",")
+        Dim First As String = Split(0)
+        txtFirstName.Text = First
+        Dim Last As String = Split(1)
+        txtLastName.Text = Last
+        Dim address As String = Split(2)
+        txtAddress.Text = address
+        Dim City As String = Split(3)
+        txtCity.Text = City
+        Dim State As String = Split(4)
+        txtState.Text = State
+        Dim zip As String = Split(5)
+        txtZip.Text = zip
+        Dim phone As String = Split(6)
+        txtPhone.Text = phone
+        Dim email As String = Split(7)
+        txtEmail.Text = email
+        Dim ssn As String = Split(8)
+        txtSSN.Text = ssn
+
+    End Sub
+
+    Private Sub btnOpen_Click(sender As Object, e As EventArgs) Handles btnOpen.Click
+        cdlOpenFile()
+    End Sub
+
+    Private Function cdlOpenFile() As Object
+        cdlOpenFile.Title = "Choose the correct file"
+        cdlOpenFile.Filter = "Text Files (*.txt)|*.txt"
+        cdlOpenFile.ShowDialog() ' Display the open dialog box
+        ' cdlFile.FileName below is obtained from the ShowDialog method
+        Student = New System.IO.StreamReader(cdlOpenFile.FileName)
+    End Function
+
 End Class
