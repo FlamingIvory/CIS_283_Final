@@ -100,4 +100,39 @@
         MsgBox("The information was updated successfully", MsgBoxStyle.Information, "Success!")
 
     End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Dim theSQL As String
+        Dim cnnDatabase As New OleDb.OleDbConnection
+        Dim cmdDelete As New OleDb.OleDbCommand
+
+        cnnDatabase.ConnectionString = "Provider=Microsoft.ACE.oleDB.12.0; Data Source=Login.accdb"
+        theSQL = "DELETE Student WHERE Student_OID = " & dtbStudent.Rows(studentRowNo)("Student_OID")
+
+        cmdDelete = New OleDb.OleDbCommand(theSQL, cnnDatabase)
+        cnnDatabase.Open()
+        cmdDelete.ExecuteNonQuery()
+        cnnDatabase.Close()
+
+        MsgBox("The information was deleted successfully", MsgBoxStyle.Information, "Success!")
+
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        Dim theSQL As String
+        Dim cnnDatabase As New OleDb.OleDbConnection
+        Dim cmdAdd As New OleDb.OleDbCommand
+
+        cnnDatabase.ConnectionString = "Provider=Microsoft.ACE.oleDB.12.0; Data Source=Login.accdb"
+        theSQL = "INSERT INTO Student VALUES ('" & txtFirstName.Text & "', " & txtLastName.Text & "', " & txtAddress.Text & "', " & txtCity.Text & "', " & txtState.Text & "', " _
+            & txtZip.Text & "', " & txtPhone.Text & "', " & txtEmail.Text & "', " & txtSSN.Text & "')"
+
+        cmdAdd = New OleDb.OleDbCommand(theSQL, cnnDatabase)
+        cnnDatabase.Open()
+        cmdAdd.ExecuteNonQuery()
+        cnnDatabase.Close()
+
+        MsgBox("The information was added successfully", MsgBoxStyle.Information, "Success!")
+
+    End Sub
 End Class
