@@ -122,8 +122,11 @@
 the file and inset first name, last name, address, city,
 state, zip, phone number, email, and ssn in that order
 seperated by commas. To access the text file 
-StudentInformation click the button below. 
+click the open button below. 
 To insert data from the text file press the update 
 button.</value>
   </data>
+  <metadata name="cdlOpenFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

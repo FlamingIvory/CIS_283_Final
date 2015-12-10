@@ -1,10 +1,25 @@
 ﻿Public Class frmMain
 
-    Dim dtbStudent As DataTable
-    Dim studentRowNo As Integer
+    Dim dtbStudent As DataTable 'Data table for the Search tab
+    Dim studentRowNo As Integer 'Row counter for the Search tab
+    Dim ImportedFileName As String 'File Name for From File tab
+    Dim NumRecords As Integer 'Number of imported records for From File tab
+
+    Private Sub btnQuit_Click(sender As Object, e As EventArgs) Handles btnQuit.Click
+        ' Confirm exit message
+        Dim Confirm As String = MsgBox("Are you sure you want to quit?", MsgBoxStyle.YesNo Or MsgBoxStyle.Exclamation, "Are you sure?")
+        If Confirm = MsgBoxResult.No Then
+            Exit Sub
+        Else
+            Me.Close()
+            frmLogin.Close()
+        End If
+    End Sub
+
 
     '==========FUNCTIONS FOR SEARCH TAB==========
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        ' Connect to the database
         Dim cnnDatabase As New OleDb.OleDbConnection
         Dim rdDatabase As OleDb.OleDbDataReader
 
@@ -62,6 +77,11 @@
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        ' Enable/Diable buttons for data validation
+        btnAdd.Enabled = False
+        btnEditSave.Enabled = True
+
+        ' Move information from Search tab to Add/Edit tab
         txtFirstName.Text = dtbStudent.Rows(studentRowNo)("Student_First")
         txtLastName.Text = dtbStudent.Rows(studentRowNo)("Student_Last")
         txtAddress.Text = dtbStudent.Rows(studentRowNo)("Student_Address")
@@ -72,114 +92,197 @@
         txtEmail.Text = dtbStudent.Rows(studentRowNo)("Student_Email")
         txtSSN.Text = dtbStudent.Rows(studentRowNo)("Student_SSN")
 
+        ' Go to Add/Edit Tab
         TabControl1.SelectTab(1)
     End Sub
 
     '==========FUNCTIONS FOR EDIT TAB==========
-    Private Sub btnQuit_Click(sender As Object, e As EventArgs) Handles btnQuit.Click
-        Me.Close()
-        frmLogin.Close()
-    End Sub
-
     Private Sub btnEditSave_Click(sender As Object, e As EventArgs) Handles btnEditSave.Click
+        ' Connect to the database
         Dim theSQL As String
         Dim cnnDatabase As New OleDb.OleDbConnection
         Dim cmdUpdate As New OleDb.OleDbCommand
 
         cnnDatabase.ConnectionString = "Provider=Microsoft.ACE.oleDB.12.0; Data Source=Login.accdb"
+
+        ' Prepare the query
         theSQL = "UPDATE Student SET Student_First = '" & txtFirstName.Text & "',Student_Last = '" & txtLastName.Text & "'," _
             & "Student_Address = '" & txtAddress.Text & "',Student_City = '" & txtCity.Text & "',Student_State = '" & txtState.Text & "'," _
             & "Student_Zip = '" & txtZip.Text & "', Student_Phone = '" & txtPhone.Text & "', Student_Email = '" & txtEmail.Text & "', Student_SSN = '" & txtSSN.Text & "'" _
             & " WHERE Student_OID = " & dtbStudent.Rows(studentRowNo)("Student_OID")
 
+        ' Execute the Query
         cmdUpdate = New OleDb.OleDbCommand(theSQL, cnnDatabase)
         cnnDatabase.Open()
         cmdUpdate.ExecuteNonQuery()
         cnnDatabase.Close()
-
         MsgBox("The information was updated successfully", MsgBoxStyle.Information, "Success!")
+
+        ' Enable/Disable buttons
+        btnEditSave.Enabled = False
+        btnAdd.Enabled = True
+
+        'Clear information
+        txtFirstName.Clear()
+        txtLastName.Clear()
+        txtAddress.Clear()
+        txtCity.Clear()
+        txtState.Clear()
+        txtZip.Clear()
+        txtPhone.Clear()
+        txtEmail.Clear()
+        txtSSN.Clear()
 
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        Dim theSQL As String
-        Dim cnnDatabase As New OleDb.OleDbConnection
-        Dim cmdDelete As New OleDb.OleDbCommand
+        ' Confirm delete action
+        Dim Confirm As String = MsgBox("The following action will PERMANENTLY delete record from the database. Are you sure you want to proceed?", MsgBoxStyle.YesNo Or MsgBoxStyle.Exclamation, "Delete Data?")
+        If Confirm = MsgBoxResult.No Then
+            Exit Sub
+        Else
+            ' Connect to the database
+            Dim theSQL As String
+            Dim cnnDatabase As New OleDb.OleDbConnection
+            Dim cmdDelete As New OleDb.OleDbCommand
 
-        cnnDatabase.ConnectionString = "Provider=Microsoft.ACE.oleDB.12.0; Data Source=Login.accdb"
-        theSQL = "DELETE FROM Student WHERE Student_OID = " & dtbStudent.Rows(studentRowNo)("Student_OID")
+            cnnDatabase.ConnectionString = "Provider=Microsoft.ACE.oleDB.12.0; Data Source=Login.accdb"
 
-        cmdDelete = New OleDb.OleDbCommand(theSQL, cnnDatabase)
-        cnnDatabase.Open()
-        cmdDelete.ExecuteNonQuery()
-        cnnDatabase.Close()
+            ' Prepare the query
+            theSQL = "DELETE FROM Student WHERE Student_OID = " & dtbStudent.Rows(studentRowNo)("Student_OID")
 
-        txtResultSSN.Clear()
-        txtResultFirstName.Clear()
-        txtResultLastName.Clear()
-        txtResultPhoneNo.Clear()
-        txtResultAddress.Clear()
-        txtResultEmail.Clear()
-
-        MsgBox("The information was deleted successfully", MsgBoxStyle.Information, "Success!")
-
+            ' Execute the query
+            cmdDelete = New OleDb.OleDbCommand(theSQL, cnnDatabase)
+            cnnDatabase.Open()
+            cmdDelete.ExecuteNonQuery()
+            cnnDatabase.Close()
+            MsgBox("The information was deleted successfully", MsgBoxStyle.Information, "Success!")
+            ' Clear information
+            txtResultSSN.Clear()
+            txtResultFirstName.Clear()
+            txtResultLastName.Clear()
+            txtResultPhoneNo.Clear()
+            txtResultAddress.Clear()
+            txtResultEmail.Clear()
+            cboSelectResults.Items.Clear()
+        End If
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        ' Connect to the database
         Dim theSQL As String
         Dim cnnDatabase As New OleDb.OleDbConnection
         Dim cmdAdd As New OleDb.OleDbCommand
 
         cnnDatabase.ConnectionString = "Provider=Microsoft.ACE.oleDB.12.0; Data Source=Login.accdb"
+
+        ' Prepare the query
         theSQL = "INSERT INTO Student(Student_First,Student_Last,Student_Address,Student_City,Student_State,Student_Zip,Student_Phone,Student_Email,Student_SSN) " _
-            & "VALUES ('" & txtFirstName.Text & "','" & txtLastName.Text & "', '" & txtAddress.Text & "', '" & txtCity.Text & "', '" & txtState.Text & "', '" _
+            & "VALUES ('" & txtFirstName.Text & "', '" & txtLastName.Text & "', '" & txtAddress.Text & "', '" & txtCity.Text & "', '" & txtState.Text & "', '" _
             & txtZip.Text & "', '" & txtPhone.Text & "', '" & txtEmail.Text & "', '" & txtSSN.Text & "')"
 
+        ' Execute the query
         cmdAdd = New OleDb.OleDbCommand(theSQL, cnnDatabase)
         cnnDatabase.Open()
         cmdAdd.ExecuteNonQuery()
         cnnDatabase.Close()
-
         MsgBox("The information was added successfully", MsgBoxStyle.Information, "Success!")
 
-    End Sub
-
-
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Dim Information As String
-        Information = Student.ReadLine()
-        Dim Split = Information.Split(",")
-        Dim First As String = Split(0)
-        txtFirstName.Text = First
-        Dim Last As String = Split(1)
-        txtLastName.Text = Last
-        Dim address As String = Split(2)
-        txtAddress.Text = address
-        Dim City As String = Split(3)
-        txtCity.Text = City
-        Dim State As String = Split(4)
-        txtState.Text = State
-        Dim zip As String = Split(5)
-        txtZip.Text = zip
-        Dim phone As String = Split(6)
-        txtPhone.Text = phone
-        Dim email As String = Split(7)
-        txtEmail.Text = email
-        Dim ssn As String = Split(8)
-        txtSSN.Text = ssn
+        ' Clear information
+        txtFirstName.Clear()
+        txtLastName.Clear()
+        txtAddress.Clear()
+        txtCity.Clear()
+        txtState.Clear()
+        txtZip.Clear()
+        txtPhone.Clear()
+        txtEmail.Clear()
+        txtSSN.Clear()
 
     End Sub
 
+    '==========FUNCTIONS FOR FROM FILE TAB==========
     Private Sub btnOpen_Click(sender As Object, e As EventArgs) Handles btnOpen.Click
-        cdlOpenFile()
+        Dim ImportFileName As String
+        Dim FileFilter As String = "Text Files (*.txt)|*txt|All Files (*.*)|*.*"
+
+        ' User selects the file
+        ImportFileName = GetTheFileName(cdlOpenFile, "Please select a file to import", FileFilter)
+        If ImportFileName = "" Then
+            Exit Sub
+        Else
+            ImportedFileName = ImportFileName
+            ListRecords()
+        End If
     End Sub
 
-    Private Function cdlOpenFile() As Object
-        cdlOpenFile.Title = "Choose the correct file"
-        cdlOpenFile.Filter = "Text Files (*.txt)|*.txt"
-        cdlOpenFile.ShowDialog() ' Display the open dialog box
-        ' cdlFile.FileName below is obtained from the ShowDialog method
-        Student = New System.IO.StreamReader(cdlOpenFile.FileName)
+    Private Function GetTheFileName(ByRef TheDialog As FileDialog, ByVal TheTitle As String, ByVal TheFilter As String) As String
+        With TheDialog
+            .Title = TheTitle
+            .Filter = TheFilter
+            If .ShowDialog() = Windows.Forms.DialogResult.Cancel Then
+                Return ("")
+            End If
+            Return (.FileName)
+        End With
     End Function
 
+    Private Sub ListRecords()
+        ' Open the filer eader
+        Dim FileReader As System.IO.StreamReader
+        FileReader = New System.IO.StreamReader(ImportedFileName)
+        Dim CurrentRecord() As String
+        Dim Counter As Integer = 0 ' Number of records found
+
+        Do Until FileReader.Peek() = -1
+            CurrentRecord = Split(FileReader.ReadLine(), ",") ' Get rid of commas
+            lstImportedRecords.Items.Add(CurrentRecord(0) & " " & CurrentRecord(1) & ", " & CurrentRecord(2) & ", " & CurrentRecord(3) & ", " _
+                                         & CurrentRecord(4) & ", " & CurrentRecord(5)) ' Populate the list box
+            Counter += 1
+        Loop
+        NumRecords = Counter ' Set global variable
+        FileReader.Close()
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        ' Confirm update action
+        Dim Confirm As String = MsgBox("The imported records will be added to the database. Are you sure you want to import the data?", MsgBoxStyle.YesNo Or MsgBoxStyle.Exclamation, "Import Data?")
+        If Confirm = MsgBoxResult.No Then
+            Exit Sub
+        Else
+            If ImportedFileName = "" Then ' If no file has been selected yet...
+                MsgBox("Please choose the file you want to import information from.", MsgBoxStyle.Information, "Error")
+                Exit Sub
+            End If
+            Dim ImportedRecords(NumRecords - 1) As String ' Imported Records
+            Dim FileReader As System.IO.StreamReader = New System.IO.StreamReader(ImportedFileName) ' File Reader
+            Dim CurrentRecord() As String
+
+            'Connect to the database
+            Dim theSQL As String
+            Dim cnnDatabase As New OleDb.OleDbConnection
+            Dim cmdAdd As New OleDb.OleDbCommand
+            cnnDatabase.ConnectionString = "Provider=Microsoft.ACE.oleDB.12.0; Data Source=Login.accdb"
+
+            ' Add the records to the database
+            Do Until FileReader.Peek() = -1
+                CurrentRecord = Split(FileReader.ReadLine(), ",")
+
+                ' Prepare query
+                theSQL = "INSERT INTO Student(Student_First,Student_Last,Student_Address,Student_City,Student_State,Student_Zip,Student_Phone,Student_Email,Student_SSN) " _
+                & "VALUES ('" & CurrentRecord(0) & "', '" & CurrentRecord(1) & "', '" & CurrentRecord(2) & "', '" & CurrentRecord(3) & "', '" & CurrentRecord(4) & "', '" _
+                & CurrentRecord(5) & "', '" & CurrentRecord(6) & "', '" & CurrentRecord(7) & "', '" & CurrentRecord(8) & "')"
+
+                ' Execute query
+                cmdAdd = New OleDb.OleDbCommand(theSQL, cnnDatabase)
+                cnnDatabase.Open()
+                cmdAdd.ExecuteNonQuery()
+                cnnDatabase.Close()
+            Loop
+            MsgBox("The information was added successfully", MsgBoxStyle.Information, "Success!")
+
+            ' Clear information
+            lstImportedRecords.Items.Clear()
+        End If
+    End Sub
 End Class
